@@ -1,0 +1,36 @@
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+//media queries
+@mixin respond($breakpoint) {
+    @if $breakpoint==mobile {
+        @media (max-width: 599px) {
+            @content
+        }
+    }
+    @if $breakpoint==tab-port {
+        @media (min-width: 600px) and (max-width: 768px) {
+            @content
+        }
+    }
+    @if $breakpoint==tab-land {
+        @media (min-width: 769px) and (max-width: 1120px) {
+            @content
+        }
+    }
+    @if $breakpoint==desktop {
+        @media (min-width: 1121px) {
+            @content
+        }
+    }
+    @if $breakpoint==small-mobile {
+        @media (max-width: 349px) {
+            @content
+        }
+    }
+}

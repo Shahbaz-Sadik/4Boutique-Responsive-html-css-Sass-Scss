@@ -1,0 +1,45 @@
+.btn:link,
+.btn:visited {
+    text-decoration: none;
+    border: 1px solid $color-white;
+}
+
+.btn:hover,
+.btn:active {
+    border: 1px solid black;
+    color: black;
+}
+
+.grid-image-btn {
+    text-transform: uppercase;
+    color: $color-white;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: normal;
+    padding: 5px 10px;
+}
+
+.big-image-btn {
+    position: absolute;
+    top: 60%;
+    left: 44%;
+    transform: translateX(-50%);
+    @include respond(mobile) {
+        left: 49%;
+    }
+}
+
+.aside-1-btn {
+    position: absolute;
+    top: 67%;
+    left: 25%;
+    @include respond(mobile) {
+        left: 16%;
+        top: 58%;
+    }
+}
+
+.aside-2-btn {
+    float: right;
+    margin-right: 18%;
+}
